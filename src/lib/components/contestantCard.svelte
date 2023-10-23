@@ -20,7 +20,7 @@
 	}}
 	class="relative w-full h-64 rounded-lg shadow-lg text-center overflow-hidden"
 >
-	<img src={image} alt="John Doe" class="w-full h-full object-cover rounded-t-lg" />
+	<img src={image} alt="John Doe" class="w-full h-full object-fit rounded-t-lg" />
 
 	{#if voted}
 		<div class="absolute inset-0 w-full bg-slate-900 bg-opacity-80 z-20 pointer-events-none">
