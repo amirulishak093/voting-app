@@ -21,7 +21,6 @@ model User {
 model Contestant {
   id        String   @id @default(auto()) @map("_id") @db.ObjectId
   name      String
-  region    String
   image     String
   createdAt DateTime @default(now())
 
