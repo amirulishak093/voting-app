@@ -1,0 +1,76 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL") 
+}
+
+model User {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  ipAddress String   @unique
+  createdAt DateTime @default(now())
+
+  votes     Vote[]
+}
+
+model Contestant {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  name      String
+  region    String
+  image     String
+  createdAt DateTime @default(now())
+
+  votes       Vote[]
+}
+
+model Vote {
+  id           String   @id @default(auto()) @map("_id") @db.ObjectId
+  userId       String   @db.ObjectId
+  contestantId String   @db.ObjectId
+  createdAt    DateTime   @default(now())
+
+  user         User       @relation(fields: [userId], references: [id])
+  contestant   Contestant @relation(fields: [contestantId], references: [id])
+
+  @@unique([userId, contestantId])
+}
+
+// datasource db {
+//   provider = "sqlite"
+//   url      = env("DATABASE_URL") 
+// }
+
+// model User {
+//   id        Int      @id @default(autoincrement())
+//   ipAddress String   @unique
+//   createdAt DateTime @default(now())
+
+//   votes     Vote[]
+// }
+
+// model Contestant {
+//   id        Int      @id @default(autoincrement())
+//   name      String
+//   region    String
+//   image     String
+//   createdAt DateTime @default(now())
+
+//   votes       Vote[]
+// }
+
+// model Vote {
+//   id           Int        @id @default(autoincrement())
+//   userId       Int
+//   contestantId Int
+//   createdAt    DateTime   @default(now())
+
+//   user         User       @relation(fields: [userId], references: [id])
+//   contestant   Contestant @relation(fields: [contestantId], references: [id])
+
+//   @@unique([userId, contestantId])
+// }
