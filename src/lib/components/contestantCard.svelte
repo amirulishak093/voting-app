@@ -18,7 +18,7 @@
 			$selected.name = name;
 		}
 	}}
-	class="relative w-full h-64 rounded-lg shadow-lg text-center overflow-hidden"
+	class="relative w-full h-64 rounded-lg shadow-lg text-center overflow-hidden bg-white"
 >
 	<img src={image} alt="John Doe" class="w-full h-full object-contain rounded-t-lg" />
 
