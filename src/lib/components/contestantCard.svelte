@@ -31,7 +31,6 @@
 	<div class="absolute left-0 bottom-0 w-full">
 		<div class="w-full p-2 bg-slate-900 bg-opacity-40">
 			<h2 class="text-white text-xl font-semibold">{name}</h2>
-			<p class="text-gray-300">{region}</p>
 		</div>
 	</div>
 </div>
