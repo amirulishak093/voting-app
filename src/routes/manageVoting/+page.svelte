@@ -52,7 +52,6 @@
                 <input name="contestantId" type="hidden" value={contestant.id} />
               </td>
             </tr>
-            <input name="contestantId" type="hidden" value={contestant.id} />
           {/each}
 
         </tbody>
