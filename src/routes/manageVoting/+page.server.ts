@@ -11,11 +11,12 @@ export async function load(event: RequestEvent) {
 export const actions: Actions = {
   default: async ({ request }) => {
     const formData = await request.formData();
+    const contestantId = formData.get('contestantId') as string;
 
     console.log(formData);
 
     try {
-      // await toggleEnabled(contestantId)
+      await toggleEnabled(contestantId)
 
       return {
         success: true,
