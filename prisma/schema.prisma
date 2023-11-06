@@ -22,6 +22,7 @@ model Contestant {
   id        String   @id @default(auto()) @map("_id") @db.ObjectId
   name      String
   image     String
+  enabled   Boolean @default(false)
   createdAt DateTime @default(now())
 
   votes       Vote[]
