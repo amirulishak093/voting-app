@@ -59,8 +59,9 @@
             </tr>
           {/each}
           <tr class="bg-white dark:bg-gray-800 dark:border-gray-700">
-    
+              <td class="px-6 py-4">
                 <Button type="submit">{data.contestants[0].enabled ? 'Disable All' : 'Enable All'}</Button>
+              </td>
   
           </tr>
 
