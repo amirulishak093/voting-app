@@ -1,6 +1,6 @@
 import type { Actions } from "@sveltejs/kit";
 import type { RequestEvent } from "../$types";
-import { getContestants } from "$lib/server/services/contestant";
+import { getContestants, toggleEnabled } from "$lib/server/services/contestant";
 
 export async function load(event: RequestEvent) {
   const contestants = await getContestants();
@@ -9,5 +9,25 @@ export async function load(event: RequestEvent) {
 }
 
 export const actions: Actions = {
-  default: async ({ request }) => {},
+  default: async ({ request }) => {
+    const formData = await request.formData();
+
+    const contestantId = formData.get('contestantId') as string;
+
+    try {
+      await toggleEnabled(contestantId)
+
+      return {
+        success: true,
+        status: 'Form is submitted'
+      }
+
+    } catch (error) {
+      console.log(error)
+
+      return {
+        error
+      }
+    }
+  },
 };
