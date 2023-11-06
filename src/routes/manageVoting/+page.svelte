@@ -53,10 +53,10 @@
                 <input name="contestantId" type="hidden" value={contestant.id} />
               </td>
             </tr>
+            </form>
           {/each}
 
         </tbody>
       </table>
-    </form>
   </div>
 </div>
