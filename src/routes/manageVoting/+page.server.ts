@@ -16,7 +16,13 @@ export const actions: Actions = {
     console.log(formData);
 
     try {
-      await toggleEnabled(contestantId)
+      if (contestantId !== '') {
+        await toggleEnabled(contestantId)
+      }
+      else {
+        console.log('Hey');
+      }
+
 
       return {
         success: true,
