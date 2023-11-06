@@ -59,7 +59,9 @@
             </tr>
           {/each}
           <tr>
-            <td>
+            <th  scope="row"
+                class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white" />
+            <td class="px-6 py-4">
                 <Button type="submit">{data.contestants[0].enabled ? 'Disable All' : 'Enable All'}</Button>
             </td>
           </tr>
