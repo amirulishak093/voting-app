@@ -31,7 +31,7 @@
                   setTimeout(async () => {
                     $loading = false;
                   }, 1000);
-                  await applyAction(result, { contestantId: contestant.id });
+                  await applyAction(result);
                   await invalidateAll();
                 };
               }}
@@ -50,7 +50,7 @@
               <td class="px-6 py-4">
                 <Button type="submit">{contestant.enabled ? 'Disable' : 'Enable'}</Button
                 >
-              //  <input name="contestantId" type="hidden" value={contestant.id} />
+                <input name="contestantId" type="hidden" value={contestant.id} />
               </td>
             </tr>
           {/each}
