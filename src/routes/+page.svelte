@@ -10,7 +10,7 @@
 
 <div class="w-full max-w-md mx-auto">
 
-	{#if data}
+	{#if data.contestants.length > 0}
 		{#if data.remainingVotes > 0}
 			<div class="px-4">
 				<h1 class="text-center font-bold text-2xl text-slate-900">Pick Your Favourite</h1>
