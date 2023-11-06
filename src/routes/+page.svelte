@@ -9,31 +9,42 @@
 </script>
 
 <div class="w-full max-w-md mx-auto">
-	{#if data.remainingVotes > 0}
-		<div class="px-4">
-			<h1 class="text-center font-bold text-2xl text-slate-900">Pick Your Favourite</h1>
-			<p class="text-center text-lg text-slate-900">
-				You have <span class="font-semibold">{data.remainingVotes}</span> votes left
-			</p>
 
-			<div class="flex flex-col gap-4 mt-8 pb-4">
-				{#each data.contestants as contestant (contestant.id)}
-					<ContestantCard
-						id={contestant.id}
-						name={contestant.name}
-						image={contestant.image}
-						voted={contestant.voted}
-					/>
-				{/each}
+	{#if data}
+		{#if data.remainingVotes > 0}
+			<div class="px-4">
+				<h1 class="text-center font-bold text-2xl text-slate-900">Pick Your Favourite</h1>
+				<p class="text-center text-lg text-slate-900">
+					You have <span class="font-semibold">{data.remainingVotes}</span> votes left
+				</p>
+
+				<div class="flex flex-col gap-4 mt-8 pb-4">
+					{#each data.contestants as contestant (contestant.id)}
+						<ContestantCard
+							id={contestant.id}
+							name={contestant.name}
+							image={contestant.image}
+							voted={contestant.voted}
+						/>
+					{/each}
+				</div>
 			</div>
-		</div>
+		{:else}
+			<div class="px-4 flex flex-col items-center gap-y-4">
+				<h1 class="text-center font-bold text-2xl text-slate-900">Thank You For Voting</h1>
+				<p class="text-center text-lg text-slate-900">
+					You have <span class="font-semibold">{data.remainingVotes}</span> votes left
+				</p>
+			</div>
+		{/if}
 	{:else}
 		<div class="px-4 flex flex-col items-center gap-y-4">
-			<h1 class="text-center font-bold text-2xl text-slate-900">Thank You For Voting</h1>
+			<h1 class="text-center font-bold text-2xl text-slate-900">Voting is Currently Closed</h1>
 			<p class="text-center text-lg text-slate-900">
 				You have <span class="font-semibold">{data.remainingVotes}</span> votes left
 			</p>
 		</div>
+
 	{/if}
 </div>
 
