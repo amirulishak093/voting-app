@@ -60,7 +60,7 @@
           {/each}
         </tbody>
       </table>
-      <div class="px-6 py-4">
+      <div class="bt-white px-6 py-4">
         <Button type="submit">{data.contestants[0].enabled ? 'Disable All' : 'Enable All'}</Button>
       </div>
 
