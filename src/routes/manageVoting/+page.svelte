@@ -61,7 +61,10 @@
         </tbody>
       </table>
       <div class="bg-white px-6 py-4">
-        <Button class="w-full" type="submit">{data.contestants[0].enabled ? 'Disable All' : 'Enable All'}</Button>
+        <div class="ml-auto">
+          <Button type="submit">{data.contestants[0].enabled ? 'Disable All' : 'Enable All'}</Button>
+        </div>
+
       </div>
 
       <input name="contestantId" type="hidden" value={selectedContestantId} />
