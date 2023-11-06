@@ -3,7 +3,6 @@
 
 	export let id = '';
 	export let name = '';
-	export let region = '';
 	export let image = '';
 	export let voted = false;
 </script>
