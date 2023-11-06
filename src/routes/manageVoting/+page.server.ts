@@ -1,6 +1,6 @@
 import type { Actions } from "@sveltejs/kit";
 import type { RequestEvent } from "../$types";
-import { getContestants, toggleEnabled } from "$lib/server/services/contestant";
+import { getContestants, toggleEnabled, toggleAllEnabled } from "$lib/server/services/contestant";
 
 export async function load(event: RequestEvent) {
   const contestants = await getContestants();
@@ -20,7 +20,7 @@ export const actions: Actions = {
         await toggleEnabled(contestantId)
       }
       else {
-        console.log('Hey');
+        await toggleAllEnabled()
       }
 
 
