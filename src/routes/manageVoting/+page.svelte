@@ -58,6 +58,9 @@
               </td>
             </tr>
           {/each}
+          <tr>
+                <Button type="submit">{data.contestants[0].enabled ? 'Disable All' : 'Enable All'}</Button>
+          </tr>
 
         </tbody>
       </table>
