@@ -1,65 +1,57 @@
 <script lang="ts">
-  import { applyAction, enhance } from "$app/forms";
-  import { invalidateAll } from "$app/navigation";
-  import { loading } from "$lib/store";
-  import { Avatar, Button } from "flowbite-svelte";
+	import { applyAction, enhance } from '$app/forms';
+	import ConfirmationModal from '$lib/components/confirmationModal.svelte';
+	import ContestantCard from '$lib/components/contestantCard.svelte';
+	import { loading, selected } from '$lib/store';
+	import { invalidateAll } from '$app/navigation';
 
-  export let data
+	export let data;
 </script>
 
 <div class="w-full max-w-md mx-auto">
-  <div class="px-4 pb-4">
-    <h1 class="text-center font-bold text-2xl text-slate-900">Manage Voting</h1>
+	{#if data.remainingVotes > 0}
+		<div class="px-4">
+			<h1 class="text-center font-bold text-2xl text-slate-900">Pick Your Favourite</h1>
+			<p class="text-center text-lg text-slate-900">
+				You have <span class="font-semibold">{data.remainingVotes}</span> votes left
+			</p>
 
-    <form
-      method="post"
-      use:enhance={() => {
-        $loading = true;
-        return async ({ result }) => {
-          setTimeout(async () => {
-            $loading = false;
-          }, 1000);
-          await applyAction(result);
-          await invalidateAll();
-        };
-      }}
-      class="relative overflow-x-auto shadow-md sm:rounded-lg"
-    >
-      <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-        <thead
-          class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400"
-        >
-          <tr>
-            <th scope="col" class="px-6 py-3"> Region </th>
-            <th scope="col" class="px-6 py-3"> Action </th>
-          </tr>
-        </thead>
-        <tbody>
-          {#each data.contestants as contestant (contestant.id)}
-            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-              <th
-                scope="row"
-                class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
-              >
-                <div class="flex items-center gap-x-2">
-                  <Avatar src={contestant.image} rounded />
-                  {contestant.name}
-                </div>
-              </th>
-              <td class="px-6 py-4">
-                <Button
-                  
-                  on:click={() => {
-                    alert("hey");
-                  }}
-                  type="submit">{contestant.enabled ? 'Disable' : 'Enable'}</Button
-                >
-              </td>
-            </tr>
-          {/each}
-
-        </tbody>
-      </table>
-    </form>
-  </div>
+			<div class="flex flex-col gap-4 mt-8 pb-4">
+				{#each data.contestants as contestant (contestant.id)}
+					<ContestantCard
+						id={contestant.id}
+						name={contestant.name}
+						image={contestant.image}
+						voted={contestant.voted}
+					/>
+				{/each}
+			</div>
+		</div>
+	{:else}
+		<div class="px-4 flex flex-col items-center gap-y-4">
+			<h1 class="text-center font-bold text-2xl text-slate-900">Thank You For Voting</h1>
+			<p class="text-center text-lg text-slate-900">
+				You have <span class="font-semibold">{data.remainingVotes}</span> votes left
+			</p>
+		</div>
+	{/if}
 </div>
+
+<form
+	method="post"
+	use:enhance={() => {
+		$loading = true;
+		return async ({ result }) => {
+			setTimeout(async () => {
+				$loading = false;
+			}, 1000);
+			await applyAction(result);
+			await invalidateAll();
+		};
+	}}
+>
+	<ConfirmationModal />
+
+	<input name="userId" type="hidden" value={data.userId} />
+	<input name="contestantId" type="hidden" value={$selected.id} />
+</form>
