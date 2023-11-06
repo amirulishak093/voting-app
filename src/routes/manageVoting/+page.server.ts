@@ -9,7 +9,7 @@ export async function load(event: RequestEvent) {
 }
 
 export const actions: Actions = {
-  default: async ({ request, params }) => {
+  default: async ({ request }) => {
     const formData = await request.formData();
 
     console.log(formData);
