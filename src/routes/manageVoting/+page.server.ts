@@ -10,9 +10,9 @@ export async function load(event: RequestEvent) {
 
 export const actions: Actions = {
   default: async ({ request, params }) => {
+    const formData = await request.formData();
 
-
-    console.log(params);
+    console.log(formData);
 
     try {
       // await toggleEnabled(contestantId)
