@@ -22,7 +22,6 @@
           </tr>
         </thead>
         <tbody>
-          {#each data.contestants as contestant (contestant.id)}
             <form
               method="post"
               use:enhance={() => {
@@ -37,6 +36,8 @@
               }}
               class="relative overflow-x-auto shadow-md sm:rounded-lg"
             >
+          {#each data.contestants as contestant (contestant.id)}
+
             <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
               <th
                 scope="row"
@@ -53,9 +54,9 @@
                 <input name="contestantId" type="hidden" value={contestant.id} />
               </td>
             </tr>
-            </form>
+           
           {/each}
-
+         </form>
         </tbody>
       </table>
   </div>
