@@ -14,6 +14,8 @@ export const actions: Actions = {
 
     const contestantId = formData.get('contestantId') as string;
 
+    console.log(contestantId);
+
     try {
       await toggleEnabled(contestantId)
 
