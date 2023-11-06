@@ -11,20 +11,7 @@
   <div class="px-4 pb-4">
     <h1 class="text-center font-bold text-2xl text-slate-900">Manage Voting</h1>
 
-    <form
-      method="post"
-      use:enhance={() => {
-        $loading = true;
-        return async ({ result }) => {
-          setTimeout(async () => {
-            $loading = false;
-          }, 1000);
-          await applyAction(result);
-          await invalidateAll();
-        };
-      }}
-      class="relative overflow-x-auto shadow-md sm:rounded-lg"
-    >
+
       <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
         <thead
           class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400"
@@ -36,6 +23,20 @@
         </thead>
         <tbody>
           {#each data.contestants as contestant (contestant.id)}
+            <form
+              method="post"
+              use:enhance={() => {
+                $loading = true;
+                return async ({ result }) => {
+                  setTimeout(async () => {
+                    $loading = false;
+                  }, 1000);
+                  await applyAction(result, { contestantId: contestant.id });
+                  await invalidateAll();
+                };
+              }}
+              class="relative overflow-x-auto shadow-md sm:rounded-lg"
+            >
             <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
               <th
                 scope="row"
@@ -49,7 +50,7 @@
               <td class="px-6 py-4">
                 <Button type="submit">{contestant.enabled ? 'Disable' : 'Enable'}</Button
                 >
-                <input name="contestantId" type="hidden" value={contestant.id} />
+              //  <input name="contestantId" type="hidden" value={contestant.id} />
               </td>
             </tr>
           {/each}
