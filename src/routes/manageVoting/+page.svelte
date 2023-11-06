@@ -49,6 +49,7 @@
               <td class="px-6 py-4">
                 <Button type="submit">{contestant.enabled ? 'Disable' : 'Enable'}</Button
                 >
+                <input name="contestantId" type="hidden" value={contestant.id} />
               </td>
             </tr>
             <input name="contestantId" type="hidden" value={contestant.id} />
