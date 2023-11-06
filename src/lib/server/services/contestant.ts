@@ -77,3 +77,39 @@ export async function toggleEnabled(contestantId: string) {
     throw new Error("Failed to toggle contestant enabled status");
   }
 }
+
+// Toggle the 'enabled' field on all contestants.
+export async function toggleAllEnabled() {
+  try {
+    // Find all contestants in the database.
+    const allContestants = await db.contestant.findMany();
+
+    if (!allContestants || allContestants.length === 0) {
+      throw new Error("No contestants found");
+    }
+
+    // Get the IDs of all contestants to be updated.
+    const contestantIds = allContestants.map((contestant) => contestant.id);
+
+    // Determine the new 'enabled' value (toggled).
+    const newEnabledValue = !allContestants[0].enabled; // Assuming all contestants have the same initial state
+
+    // Perform a bulk update to toggle the 'enabled' field for all contestants.
+    const updatedContestants = await db.contestant.updateMany({
+      where: {
+        id: {
+          in: contestantIds,
+        },
+      },
+      data: {
+        enabled: newEnabledValue,
+      },
+    });
+
+    // Return the updated contestants.
+    return updatedContestants;
+  } catch (error) {
+    console.error("Error toggling enabled status for all contestants", error);
+    throw new Error("Failed to toggle enabled status for all contestants");
+  }
+}
