@@ -48,9 +48,7 @@
               </th>
               <td class="px-6 py-4">
                 <Button
-                  
                   on:click={() => {
-                    alert("hey");
                   }}
                   type="submit">{contestant.enabled ? 'Disable' : 'Enable'}</Button
                 >
