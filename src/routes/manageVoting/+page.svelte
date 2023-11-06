@@ -61,7 +61,7 @@
         </tbody>
       </table>
       <div class="bg-white px-6 py-4">
-        <Button type="submit">{data.contestants[0].enabled ? 'Disable All' : 'Enable All'}</Button>
+        <Button class="w-full" type="submit">{data.contestants[0].enabled ? 'Disable All' : 'Enable All'}</Button>
       </div>
 
       <input name="contestantId" type="hidden" value={selectedContestantId} />
