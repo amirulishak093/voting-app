@@ -56,6 +56,7 @@
                 >
               </td>
             </tr>
+            <input type="hidden" value={contestant.id} />
           {/each}
 
         </tbody>
