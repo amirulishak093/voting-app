@@ -5,6 +5,8 @@
   import { Avatar, Button } from "flowbite-svelte";
 
   export let data
+
+ $: selectedContestantId = ''
 </script>
 
 <div class="w-full max-w-md mx-auto">
@@ -49,16 +51,17 @@
               <td class="px-6 py-4">
                 <Button
                   on:click={() => {
+                    selectedContestantId = contestant.id
                   }}
                   type="submit">{contestant.enabled ? 'Disable' : 'Enable'}</Button
                 >
               </td>
             </tr>
-            <input name="contestantId" type="hidden" value={contestant.id} />
           {/each}
 
         </tbody>
       </table>
+      <input name="contestantId" type="hidden" value={selectedContestantId} />
     </form>
   </div>
 </div>
