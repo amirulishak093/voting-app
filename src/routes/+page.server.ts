@@ -9,7 +9,7 @@ export async function load(event: RequestEvent) {
 
 	const user = await createUser({ data: { ipAddress } });
 
-	const contestants = await getContestants();
+	const contestants = await getContestants({where: {enabled: true}});
 
 	const voteCounts = (await getUserVotes(user.id)).length;
 
