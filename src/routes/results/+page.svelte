@@ -46,7 +46,7 @@
 				labels: data.voteResults.map((voteResults) => voteResults.name),
 				datasets: [
 					{
-						label: 'Votes',
+		
 						data: data.voteResults.map((voteResults) => voteResults.voteCount),
 						backgroundColor: 'rgba(75, 192, 192, 0.2)',
 						borderColor: 'rgba(75, 192, 192, 1)',
