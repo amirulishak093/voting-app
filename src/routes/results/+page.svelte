@@ -73,7 +73,12 @@
 						}
 					},
 					y: {
-						beginAtZero: true
+						beginAtZero: true,
+				                 ticks: {
+				                        font: {
+				                            size: 20 
+				                        }
+				                    }
 					}
 				}
 			}
