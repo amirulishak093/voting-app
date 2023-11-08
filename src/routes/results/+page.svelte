@@ -71,7 +71,7 @@
 						ticks: {
 							stepSize: 1,
 				                        font: {
-				                            size: 20 
+				                            size: 18 
 				                        }
 						}
 					},
@@ -79,7 +79,7 @@
 						beginAtZero: true,
 				                 ticks: {
 				                        font: {
-				                            size: 20 
+				                            size: 18 
 				                        }
 				                    }
 					}
