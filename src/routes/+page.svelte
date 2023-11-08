@@ -8,7 +8,7 @@
 	export let data;
 </script>
 
-<div class="w-full max-w-lg mx-auto">
+<div class="w-full max-w-md mx-auto">
 
 	{#if data.contestants.length > 0}
 		{#if data.remainingVotes > 0}
