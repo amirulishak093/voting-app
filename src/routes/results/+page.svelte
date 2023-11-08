@@ -7,6 +7,7 @@
 	let chartInstance: any;
 	let intervalId: any;
 
+
 	export let data;
 
 	let names: { name: string }[] = [];
