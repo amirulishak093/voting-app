@@ -61,11 +61,7 @@
 			        },
 				plugins: {
 					legend: {
-				                labels: {
-				                    font: {
-				                        size: 18
-				                    }
-				                }
+				                display: false
 					},
 					datalabels: {
 					   font: {
