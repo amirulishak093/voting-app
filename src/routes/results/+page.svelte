@@ -40,7 +40,6 @@
 		intervalId = setInterval(refreshData, 5000);
 
 		chartInstance = new Chart(chartContext, {
-			type: 'line',
 			plugins: [CategoryScale, Title, BarController, Tooltip],
 			data: {
 				labels: data.voteResults.map((voteResults) => voteResults.name),
@@ -51,7 +50,7 @@
 						backgroundColor: 'rgba(75, 192, 192, 0.2)',
 						borderColor: 'rgba(75, 192, 192, 1)',
 						borderWidth: 1,
-						type: 'bar'
+						type: 'line'
 					}
 				]
 			},
@@ -63,7 +62,7 @@
 					legend: {
 				                labels: {
 				                    font: {
-				                        size: 16
+				                        size: 18
 				                    }
 				                }
 					},
