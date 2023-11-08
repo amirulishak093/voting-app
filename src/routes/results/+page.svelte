@@ -40,6 +40,7 @@
 		intervalId = setInterval(refreshData, 5000);
 
 		chartInstance = new Chart(chartContext, {
+			type: 'line',
 			plugins: [CategoryScale, Title, BarController, Tooltip],
 			data: {
 				labels: data.voteResults.map((voteResults) => voteResults.name),
