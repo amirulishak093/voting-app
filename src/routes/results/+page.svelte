@@ -71,7 +71,7 @@
 				},
 				indexAxis: 'y',
 				scales: {
-	
+					x: { display: false },
 					y: {
 						beginAtZero: true,
 				                 ticks: {
