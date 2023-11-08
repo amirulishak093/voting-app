@@ -56,6 +56,9 @@
 				]
 			},
 			options: {
+			        layout: {
+			            padding: 20
+			        },
 				plugins: {
 					legend: {
 				                labels: {
