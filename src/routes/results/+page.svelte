@@ -59,7 +59,7 @@
 					legend: {
 				                labels: {
 				                    font: {
-				                        size: 20
+				                        size: 16
 				                    }
 				                }
 					},
