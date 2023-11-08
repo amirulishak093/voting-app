@@ -67,18 +67,15 @@
 				                    }
 				                }
 					},
+					datalabels: {
+					   font: {
+					     size: 20
+					   }
+					}
 				},
 				indexAxis: 'y',
 				scales: {
-					x: {
-						beginAtZero: true,
-						ticks: {
-							stepSize: 1,
-				                        font: {
-				                            size: 18 
-				                        }
-						}
-					},
+	
 					y: {
 						beginAtZero: true,
 				                 ticks: {
