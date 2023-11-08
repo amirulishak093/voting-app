@@ -55,6 +55,15 @@
 				]
 			},
 			options: {
+				plugins: {
+					legend: {
+				                labels: {
+				                    font: {
+				                        size: 14
+				                    }
+				                }
+					},
+				},
 				indexAxis: 'y',
 				scales: {
 					x: {
