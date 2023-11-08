@@ -89,7 +89,6 @@
 
 <div class="w-full max-w-5xl mx-auto">
 	<div class="px-4 pb-4">
-		<h1 class="text-center font-bold text-2xl text-slate-900">Voting Results</h1>
 		<canvas bind:this={chartContext} class="w-full mt-4 bg-white rounded-lg shadow-lg" />
 	</div>
 </div>
