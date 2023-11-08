@@ -64,6 +64,7 @@
 				                display: false
 					},
 					datalabels: {
+					   display: (context) => context.dataset.data[context.dataIndex] !== 0,
 					   font: {
 					     size: 20
 					   }
