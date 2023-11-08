@@ -68,6 +68,9 @@
 					   font: {
 					     size: 20
 					   }
+					},
+					tooltip: {
+					 enabled: false
 					}
 				},
 				indexAxis: 'y',
