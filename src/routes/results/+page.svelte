@@ -57,7 +57,6 @@
 				]
 			},
 			options: {
-				responsive: true,
 			        layout: {
 			            padding: 20
 			        },
