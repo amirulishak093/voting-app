@@ -57,7 +57,7 @@
 				]
 			},
 			options: {
-				maintainAspectRatio: false,
+				// maintainAspectRatio: false,
 			        layout: {
 			            padding: auto
 			        },
