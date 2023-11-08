@@ -69,7 +69,10 @@
 					x: {
 						beginAtZero: true,
 						ticks: {
-							stepSize: 1
+							stepSize: 1,
+				                        font: {
+				                            size: 20 
+				                        }
 						}
 					},
 					y: {
