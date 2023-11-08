@@ -59,7 +59,7 @@
 			options: {
 
 			        layout: {
-			            padding: 20
+			            padding: auto
 			        },
 				plugins: {
 					legend: {
