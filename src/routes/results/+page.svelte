@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { Chart, CategoryScale, Title, BarController, Tooltip } from 'chart.js/auto';
+	import ChartDataLabels from 'chartjs-plugin-datalabels';
 	import { onMount } from 'svelte';
 
 	let chartContext: any;
@@ -40,7 +41,7 @@
 		intervalId = setInterval(refreshData, 5000);
 
 		chartInstance = new Chart(chartContext, {
-			plugins: [CategoryScale, Title, BarController, Tooltip],
+			plugins: [CategoryScale, Title, BarController, Tooltip, ChartDataLabels],
 			data: {
 				labels: data.voteResults.map((voteResults) => voteResults.name),
 				datasets: [
