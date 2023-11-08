@@ -56,8 +56,7 @@
 				]
 			},
 			options: {
-	
-  				maintainAspectRatio: false,
+
 			        layout: {
 			            padding: 20
 			        },
