@@ -39,6 +39,7 @@
 		"@prisma/client": "^5.4.2",
 		"chart.js": "^4.4.0",
 		"flowbite-svelte": "^0.44.18",
-		"tailwind-merge": "^1.14.0"
+		"tailwind-merge": "^1.14.0",
+		"chartjs-plugin-datalabels": "^2.2.0",
 	}
 }
