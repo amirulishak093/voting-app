@@ -59,7 +59,7 @@
 			options: {
 				// maintainAspectRatio: false,
 			        layout: {
-			            padding: auto
+			            padding: 20
 			        },
 				plugins: {
 					legend: {
