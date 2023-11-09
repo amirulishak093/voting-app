@@ -96,6 +96,17 @@
 </script>
 
 <style>
+
+:root {
+  --color-bg: #1e1e1e;
+  --color-particle: #fff;
+  --spacing: 2560px;
+  --time-1: 60s;
+  --time-2: 120s;
+  --time-3: 180s;
+  --time-4: 200s;
+}
+
 .page-bg, .animation-wrapper {
   position: fixed;
   top: 0;
