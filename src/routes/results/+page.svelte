@@ -109,7 +109,7 @@ body {
 
 	<div class="px-4 pb-4">
 		<div class="flex flex-col items-center justify-center mt-4">
-			<h1 class="text-center font-bold text-4xl text-white">Vote Result</h1>
+			<h1 class="text-center font-bold text-4xl text-white">Results</h1>
 		 	<canvas bind:this={chartContext} class="w-full bg-white rounded-lg shadow-lg mt-4" />
 		</div>
 		
