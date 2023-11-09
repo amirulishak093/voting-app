@@ -8,7 +8,7 @@
 	export let data;
 </script>
 
-<div class="w-full max-w-md mx-auto bg-gradient-to-b from-yellow-400 to-red-600">
+<div class="w-full max-w-md mx-auto">
 
 	{#if data.contestants.length > 0}
 		{#if data.remainingVotes > 0}
