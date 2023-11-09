@@ -14,7 +14,7 @@
 		{#if data.remainingVotes > 0}
 			<div class="px-4">
 				<h1 class="text-center font-bold text-2xl text-slate-900">Pick Your Favourite</h1>
-				<p class="text-center text-lg text-white">
+				<p class="text-center text-lg text-slate-900">
 					You have <span class="font-semibold">{data.remainingVotes}</span> votes left
 				</p>
 
