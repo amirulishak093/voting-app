@@ -52,7 +52,7 @@
 					{
 		
 						data: dataValues,
-						backgroundColor: ['#F25489', '#79C145', '#AF78E9', '#42D9C0'],
+						backgroundColor: ['#F25489', '#ded640', '#AF78E9', '#42D9C0'],
 						borderColor: 'rgba(75, 192, 192, 1)',
 						type: 'bar'
 					}
@@ -98,7 +98,7 @@
 		<canvas bind:this={chartContext} class="w-full mt-4 bg-white rounded-lg shadow-lg" />
 
 		<div class="flex justify-center mt-8">
-		 	<img class="w-80" src={'/MGT-VOTING.png'} />
+		 	<img class="w-100" src={'/MGT-VOTING.png'} />
 		</div>
 
 	</div>
