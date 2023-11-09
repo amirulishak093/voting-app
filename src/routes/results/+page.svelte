@@ -95,6 +95,12 @@
 	});
 </script>
 
+<style>
+body {
+	background: none;
+}
+</style>
+
 <div class="w-full max-w-5xl mx-auto">
 
 	  <video autoplay loop muted>
