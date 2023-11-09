@@ -97,7 +97,7 @@
 
 <div class="w-full max-w-5xl mx-auto">
 
-	  <video autoplay loop muted>
+	  <video class="w-full aspect-video" autoplay loop muted>
 	    <source src="video.mp4" type="video/mp4">
 	  </video>
 
