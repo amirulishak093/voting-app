@@ -9,7 +9,7 @@
  $: selectedContestantId = ''
 </script>
 
-<div class="w-full max-w-md mx-auto">
+<div class="w-full max-w-md mx-auto bg-gradient-to-b from-yellow-400 to-red-600">
   <div class="px-4 pb-4">
     <h1 class="text-center font-bold text-2xl text-slate-900">Manage Voting</h1>
 
