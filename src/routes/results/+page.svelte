@@ -96,7 +96,7 @@
 </script>
 
 
-<div class="w-full max-w-5xl mx-auto">
+<div class="w-full max-w-5xl mx-auto z-10">
 
 	<div class="px-4 pb-4">
 		<div class="flex flex-col items-center justify-center mt-4">
