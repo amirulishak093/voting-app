@@ -113,6 +113,6 @@
 	</div>
 </div>
 
-<div class="bg-red-500 fixed inset-0 w-full h-full">
+<div class="bg-red-500 fixed inset-0 w-full h-full -z-10">
 
 </div>
