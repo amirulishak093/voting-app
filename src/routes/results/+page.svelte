@@ -98,7 +98,7 @@
 		<canvas bind:this={chartContext} class="w-full mt-4 bg-white rounded-lg shadow-lg" />
 
 		<div class="flex justify-center mt-8">
-		 	<img class="w-60" src={'/MGT-VOTING.png'} />
+		 	<img class="w-80" src={'/MGT-VOTING.png'} />
 		</div>
 
 	</div>
