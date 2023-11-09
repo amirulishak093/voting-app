@@ -13,7 +13,7 @@
 	{#if data.contestants.length > 0}
 		{#if data.remainingVotes > 0}
 			<div class="px-4">
-				<h1 class="text-center font-bold text-2xl text-white">Pick Your Favourite</h1>
+				<h1 class="text-center font-bold text-2xl text-slate-900">Pick Your Favourite</h1>
 				<p class="text-center text-lg text-white">
 					You have <span class="font-semibold">{data.remainingVotes}</span> votes left
 				</p>
@@ -31,15 +31,15 @@
 			</div>
 		{:else}
 			<div class="px-4 flex flex-col items-center gap-y-4">
-				<h1 class="text-center font-bold text-2xl text-white">Thank You For Voting</h1>
-				<p class="text-center text-lg text-white">
+				<h1 class="text-center font-bold text-2xl text-slate-900e">Thank You For Voting</h1>
+				<p class="text-center text-lg text-slate-900">
 					You have <span class="font-semibold">{data.remainingVotes}</span> votes left
 				</p>
 			</div>
 		{/if}
 	{:else}
 		<div class="px-4 flex flex-col items-center gap-y-4">
-			<h1 class="text-center font-bold text-2xl text-white">Voting is Currently Closed</h1>
+			<h1 class="text-center font-bold text-2xl text-slate-900">Voting is Currently Closed</h1>
 		</div>
 
 	{/if}
