@@ -95,7 +95,11 @@
 
 <div class="w-full max-w-5xl mx-auto">
 	<div class="px-4 pb-4">
-		<canvas bind:this={chartContext} class="w-full mt-4 bg-white rounded-lg shadow-lg" />
+		<div class="flex flex-col items-center justify-center mt-4">
+			<h1 class="text-center font-bold text-4xl text-white">Vote Result</h1>
+		 	<canvas bind:this={chartContext} class="w-full bg-white rounded-lg shadow-lg" />
+		</div>
+		
 
 		<div class="flex flex-col items-center justify-center mt-8">
 			<h1 class="text-center font-bold text-4xl text-white">Vote Now</h1>
