@@ -70,7 +70,7 @@
 			options: {
 				    animation : false,
 				    responsive : true,
-				    maintainAspectRatio : true,
+				    maintainAspectRatio : false,
 			        layout: {
 			            padding: 20
 			        },
