@@ -96,10 +96,6 @@
 </script>
 
 
-<div class="bg-red-500 fixed inset-0 w-full h-full">
-
-</div>
-
 <div class="w-full max-w-5xl mx-auto z-10">
 
 	<div class="px-4 pb-4">
