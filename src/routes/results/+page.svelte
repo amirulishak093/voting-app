@@ -98,7 +98,8 @@
 		<canvas bind:this={chartContext} class="w-full mt-4 bg-white rounded-lg shadow-lg" />
 
 		<div class="flex justify-center mt-8">
-		 	<img class="w-96" src={'/MGT-VOTING.png'} />
+			<h1 class="text-center font-bold text-2xl text-white">Vote Now</h1>
+		 	<img class="w-[36rem]" src={'/MGT-VOTING.png'} />
 		</div>
 
 	</div>
