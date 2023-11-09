@@ -10,7 +10,7 @@
 	import LoadingSpinner from '$lib/components/loadingSpinner.svelte';
 </script>
 
-<div class="relative min-h-screen bg-gradient-to-b from-yellow-400 to-red-600">
+<div class="relative min-h-screen">
 	<Header />
 	{#if $loading}
 		<LoadingSpinner />
