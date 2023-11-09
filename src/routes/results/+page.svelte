@@ -60,7 +60,7 @@
 					{
 		
 						data: dataValues,
-						backgroundColor: backgroundImages,
+						backgroundColor: [],
 						borderColor: 'rgba(75, 192, 192, 1)',
 						borderWidth: 1,
 						type: 'bar'
@@ -68,6 +68,9 @@
 				]
 			},
 			options: {
+				    animation : false,
+				    responsive : true,
+				    maintainAspectRatio : true,
 			        layout: {
 			            padding: 20
 			        },
