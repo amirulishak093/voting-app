@@ -97,6 +97,6 @@
 	<div class="px-4 pb-4">
 		<canvas bind:this={chartContext} class="w-full mt-4 bg-white rounded-lg shadow-lg" />
 
-		<img src={'/MGT-VOTING.png'} />
+		<img class="w-40" src={'/MGT-VOTING.png'} />
 	</div>
 </div>
