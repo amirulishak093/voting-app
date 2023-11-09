@@ -54,13 +54,14 @@
 						data: dataValues,
 						backgroundColor: ['#FF5733', '#79C145', '#AF78E9', '#42D9C0'],
 						borderColor: 'rgba(75, 192, 192, 1)',
-						borderWidth: 1,
 						type: 'bar'
 					}
 				]
 			},
 			options: {
-		
+				animation: false,
+				responsive: true,
+				maintainAspectRatio: false,
 			        layout: {
 			            padding: 20
 			        },
