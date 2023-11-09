@@ -36,6 +36,17 @@
 		}
 	}
 
+	const labels = data.voteResults.map((voteResults) => voteResults.name);
+	const dataValues = data.voteResults.map((voteResults) => voteResults.voteCount);
+
+	const backgroundImages = [
+	  '/logo-rons.png',
+	  '/logo-johor-melaka-stinger.png',
+	  '/logo-hq.png',
+	  '/logo-johor-selatan.png',
+	];
+
+
 	onMount(() => {
 		chartContext = chartContext.getContext('2d');
 
@@ -44,12 +55,12 @@
 		chartInstance = new Chart(chartContext, {
 			plugins: [CategoryScale, Title, BarController, ChartDataLabels],
 			data: {
-				labels: data.voteResults.map((voteResults) => voteResults.name),
+				labels: labels,
 				datasets: [
 					{
 		
-						data: data.voteResults.map((voteResults) => voteResults.voteCount),
-						backgroundColor: 'rgba(75, 192, 192, 0.2)',
+						data: dataValues,
+						backgroundColor: backgroundImages,
 						borderColor: 'rgba(75, 192, 192, 1)',
 						borderWidth: 1,
 						type: 'bar'
