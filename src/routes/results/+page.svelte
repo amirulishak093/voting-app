@@ -95,76 +95,8 @@
 	});
 </script>
 
-<style>
-
-:root {
-  --color-bg: #1e1e1e;
-  --color-particle: #fff;
-  --spacing: 2560px;
-  --time-1: 60s;
-  --time-2: 120s;
-  --time-3: 180s;
-  --time-4: 200s;
-}
-
-.page-bg, .animation-wrapper {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.page-bg {
-  background: var(--color-bg);
-  background-blend-mode: screen;
-  background-size: cover;
-  filter: grayscale(100%);
-  z-index: -1;
-}
-
-.particle, .particle:after {
-  background: transparent;
-}
-
-.particle:after {
-  position: absolute;
-  content: "";
-  top: var(--spacing);
-}
-
-.particle-1 {
-  animation: animParticle var(--time-1) linear infinite;
-  box-shadow: 0px 0px var(--color-particle), random(var(--spacing))px random(var(--spacing))px var(--color-particle), /* ... repeat for 1000 times */;
-  border-radius: 50%;
-  height: 2px;
-  width: 2px;
-}
-
-.particle-1:after {
-  box-shadow: 
-  height: 2px;
-  width: 2px;
-  border-radius: 50%;
-}
-
-
-@keyframes animParticle {
-  from {
-    transform: translateY(0px);
-  }
-  to {
-    transform: translateY(var(--spacing) * -1);
-  }
-}
-
-</style>
 
 <div class="w-full max-w-5xl mx-auto">
-
-	  <video autoplay loop muted>
-	    <source src="video.mp4" type="video/mp4">
-	  </video>
 
 	<div class="px-4 pb-4">
 		<div class="flex flex-col items-center justify-center mt-4">
@@ -181,9 +113,6 @@
 	</div>
 </div>
 
-<div class="animation-wrapper">
-  <div class="particle particle-1"></div>
-  <div class="particle particle-2"></div>
-  <div class="particle particle-3"></div>
-  <div class="particle particle-4"></div>
+<div class="bg-red-500 fixed inset-0 w-full h-full">
+
 </div>
