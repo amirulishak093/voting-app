@@ -67,9 +67,10 @@
 				                display: false
 					},
 					datalabels: {
+				     	   color: '#FFFFFF',
 					   display: (context) => context.dataset.data[context.dataIndex] !== 0,
 					   font: {
-					     color: '#FFFFFF',
+	
 					     size: 20
 					   }
 					},
