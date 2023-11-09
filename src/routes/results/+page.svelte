@@ -39,14 +39,6 @@
 	const labels = data.voteResults.map((voteResults) => voteResults.name);
 	const dataValues = data.voteResults.map((voteResults) => voteResults.voteCount);
 
-	const backgroundImages = [
-	  '/logo-rons.png',
-	  '/logo-johor-melaka-stinger.png',
-	  '/logo-hq.png',
-	  '/logo-johor-selatan.png',
-	];
-
-
 	onMount(() => {
 		chartContext = chartContext.getContext('2d');
 
@@ -68,9 +60,7 @@
 				]
 			},
 			options: {
-				    animation : false,
-				    responsive : true,
-				    maintainAspectRatio : false,
+		
 			        layout: {
 			            padding: 20
 			        },
