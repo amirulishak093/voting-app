@@ -95,10 +95,10 @@
 	});
 </script>
 
-<style>
-body {
-	background: none;
-}
+<style global>
+  body {
+    background: none !important;
+  }
 </style>
 
 <div class="w-full max-w-5xl mx-auto">
