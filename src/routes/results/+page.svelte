@@ -99,7 +99,7 @@
 
 		<div class="flex flex-col items-center justify-center mt-8">
 			<h1 class="text-center font-bold text-4xl text-white">Vote Now</h1>
-		 	<img class="w-[36rem]" src={'/MGT-VOTING.png'} />
+		 	<img class="mt-4 w-[36rem]" src={'/MGT-VOTING.png'} />
 		</div>
 
 	</div>
