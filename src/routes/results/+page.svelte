@@ -42,7 +42,7 @@
 	onMount(() => {
 		chartContext = chartContext.getContext('2d');
 
-		intervalId = setInterval(refreshData, 5000);
+		intervalId = setInterval(refreshData, 3500);
 
 		chartInstance = new Chart(chartContext, {
 			plugins: [CategoryScale, Title, BarController, ChartDataLabels],
