@@ -59,9 +59,6 @@
 				]
 			},
 			options: {
-				animation: false,
-				responsive: true,
-				maintainAspectRatio: false,
 			        layout: {
 			            padding: 20
 			        },
