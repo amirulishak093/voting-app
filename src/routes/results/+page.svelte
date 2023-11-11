@@ -100,13 +100,21 @@
 
 	<div class="px-4 pb-4">
 		<div class="flex flex-col items-center justify-center mt-4">
-			<h1 class="text-center font-bold text-4xl text-white">Results</h1>
+			<h1 style={'text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
+    color: #fff;
+    text-align: center;
+    animation: blink 12s infinite;
+    -webkit-animation: blink 12s infinite;'} class="text-center font-bold text-4xl text-white">Results</h1>
 		 	<canvas bind:this={chartContext} class="w-full bg-white rounded-lg shadow-lg mt-4" />
 		</div>
 		
 
 		<div class="flex flex-col items-center justify-center mt-8">
-			<h1 class="text-center font-bold text-4xl text-white">Vote Now</h1>
+			<h1 style={'text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
+    color: #fff;
+    text-align: center;
+    animation: blink 12s infinite;
+    -webkit-animation: blink 12s infinite;'}  class="text-center font-bold text-4xl text-white">Vote Now</h1>
 		 	<img class="mt-4 w-[36rem]" src={'/MGT-VOTING.png'} />
 		</div>
 
