@@ -100,13 +100,13 @@
 
 	<div class="px-4 pb-4">
 		<div class="flex flex-col items-center justify-center mt-4">
-			<h1 class="text-center font-bold text-4xl text-white">Results</h1>
+			<h1 class="text-center font-bold text-4xl text-white glow">Results</h1>
 		 	<canvas bind:this={chartContext} class="w-full bg-white rounded-lg shadow-lg mt-4" />
 		</div>
 		
 
 		<div class="flex flex-col items-center justify-center mt-8">
-			<h1 class="text-center font-bold text-4xl text-white">Vote Now</h1>
+			<h1 class="text-center font-bold text-4xl text-white glow">Vote Now</h1>
 		 	<img class="mt-4 w-[36rem]" src={'/MGT-VOTING.png'} />
 		</div>
 
